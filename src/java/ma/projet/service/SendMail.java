@@ -21,8 +21,8 @@ import javax.mail.internet.MimeMessage;
  */
 public class SendMail {
 
-    static final String username = "zinebtgh19@gmail.com";
-    static final String password = "zhun bedq tgds uepb";
+    static final String username = "mail address";
+    static final String password = "password";
 
     public static void send(String msg, String email) {
         Properties props = new Properties();
@@ -41,7 +41,7 @@ public class SendMail {
         try {
 
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("zinebtgh19@gmail.com"));
+            message.setFrom(new InternetAddress("mail address"));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email));
             message.setSubject("lien de confirmation");
             message.setText(msg);
